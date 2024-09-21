@@ -4,3 +4,122 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+    --font: 'Inter-Variable';
+    --font-accent: 'PressStart2P-Regular';
+
+    --accent-color: #000;
+    --background-color: #fff;
+
+    --heart-contour: #000;
+    --active-contour: #f00;
+    --active-main-body: #f00;
+
+    --font-weight: 400;
+    --font-weight-bold: 700;
+
+    --fill-sparks-color: #f00;
+    --floopy-color: #fff;
+
+    --button-text-color: #fff;
+
+    --background-image: repeating-linear-gradient(
+        to right, 
+        #d3d3d3 0,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ), 
+      repeating-linear-gradient(
+        to bottom, 
+        #d3d3d3 0,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        to bottom,
+        #e7e7e7 0.01%,
+        #1a1a1a
+      );
+  }
+
+  :root.theme-dark {
+    --font: 'Inter-Variable';
+    --font-accent: 'PressStart2P-Regular';
+
+    --accent-color: rgb(0 204 20);
+    --background-color: #000;
+
+    --heart-contour: rgb(0 204 20);
+    --active-contour: #f00;
+    --active-main-body: #f00;
+
+    --font-weight: 465;
+    --font-weight-bold: 765;
+
+    --fill-sparks-color: #f00;
+    --floopy-color: #00CC14;
+
+    --button-text-color: rgb(0 204 20);
+
+    --background-image: repeating-linear-gradient(
+        to right, 
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ), 
+      repeating-linear-gradient(
+        to bottom, 
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        to bottom,
+        #007f0c 0.01%,
+        #004306
+      );
+}
+
+@media (prefers-color-scheme: dark) {
+    root{
+    --accent-color: rgb(0 204 20);
+    --background-color: #000;
+
+    --heart-contour: rgb(0 204 20);
+    --active-contour: #f00;
+    --active-main-body: #f00;
+
+    --font-weight: 465;
+    --font-weight-bold: 765;
+
+    --fill-sparks-color: #f00;
+    --floopy-color: #00CC14;
+
+    --button-text-color: rgb(0 204 20);
+
+    --background-image: repeating-linear-gradient(
+        to right, 
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ), 
+      repeating-linear-gradient(
+        to bottom, 
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        to bottom,
+        #007f0c 0.01%,
+        #004306
+      );
+    }   
+}
