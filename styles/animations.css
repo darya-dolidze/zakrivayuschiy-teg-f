@@ -12,6 +12,84 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.contour {
+  fill: var(--heart-contour);
+  transition-duration: 0.1s;
+}
+
+.core {
+  fill: transparent;
+  transition-delay: 0.03s;
+  transition-duration: 0.3s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon:hover {
+  .core {
+    fill: var(--heart-contour);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--heart-contour);
+    transition: fill 0.3s 0.05s linear;
+  }
+}
+
+.like-icon:active {
+  .core {
+    fill: var(--active-contour);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--active-main-body);
+    transition: fill 0.3s 0.05s linear;
+  }
+}
+
+.like-icon.is-liked {
+  animation: icon-scaling 0.3s 0.1s ease-in alternate;
+
+  .core {
+    fill: var(--heart-color);
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+  }
+
+  .main-body {
+    fill: var(--heart-color);
+    transition-delay: 0.05s;
+    transition-duration: 0.3s;
+  }
+
+  .contour {
+    fill: var(--heart-color);
+    transition-delay: 0.06s;
+    transition-duration: 0.3s;
+  }
+
+  .sparks {
+    animation-name: sparks-coloring;
+    fill: var(--heart-color);
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+  }
+} 
+
+.is-liked .heart {
+  transform-origin: center;
+  animation-name: heart-scale;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
 @keyframes triangle-play {
     from {
       transform: translateX(0px);
