@@ -163,7 +163,7 @@
 
 .picture__text {
   inset-block-start: 20px;
-  inset-inline-end: 25px;
+  inset-inline-end: clamp(0.68rem, 0.3701rem + 1.3221vw, 1.56rem);
   position: absolute;
   z-index: 2;
   opacity: 0.5;
@@ -202,7 +202,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 4px;
   float: right;
   margin: 0 25px 25px;
   max-block-size: 38px; 
@@ -211,12 +211,19 @@
 .card__icon-button {
   border: 2px solid transparent;
   background-color: transparent;
+  padding: 0 4px 0 0;
   cursor: pointer;
   inline-size: 43px;
 }
 
-.card__icon-button:focus-visible {
+.card__icon-button:focus {
   outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
 .card__like-button {
